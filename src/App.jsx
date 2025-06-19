@@ -17,9 +17,11 @@ function App() {
 
   function handleLogin(data) {
     setUser(data);
-
-    localStorage.setItem("user", JSON.stringify(data));
     setLoading(true);
+    setTimeout(() => {
+      localStorage.setItem("user", JSON.stringify(data));
+      setLoading(false);
+    }, 1000);
   }
   function handleLogOut() {
     setUser(null);
@@ -28,11 +30,15 @@ function App() {
 
   return (
     <>
-      {/* {loading && <ClipLoader color="#000" size={50} />} */}
       {user ? (
         <DashBoard onClick={handleLogOut} user={user} />
       ) : (
         <Login onClick={handleLogin} />
+      )}
+      {loading && (
+        <div className="loader-wrapper">
+          <ClipLoader color="white" size={50} />
+        </div>
       )}
     </>
   );

@@ -34,3 +34,8 @@
 .DashBoard-container button {
   height: 25px;
 }
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
