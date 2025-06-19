@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .Input-Container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.Input-Container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: blue; /* optional */
+}
+
+.DashBoard-container {
+  width: 100vw;
+
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.DashBoard-container button {
+  height: 25px;
+}
